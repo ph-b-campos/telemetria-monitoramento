@@ -12,37 +12,61 @@ Visualização: Desenvolvimento de painel operacional com atualização contínu
 ## Como Executar o Projeto
 
 ### 1. Clonar o Repositorio
-`git clone https://github.com/ph-b-campos/telemetria-monitoramento.git`
-`cd telemetria-monitoramento`
+
+```bash 
+git clone https://github.com/ph-b-campos/telemetria-monitoramento.git
+```
+
+```bash
+cd telemetria-monitoramento
+```
 
 ### 2. Configurar o Ambiente Virtual
 
 **No Windows:**
-`python -m venv venv`
-`venv\Scripts\activate`
+```bash
+python -m venv venv
+```
+```bash
+venv\Scripts\activate
+```
 
 **No Linux ou Mac:**
-`python3 -m venv venv`
-`source venv/bin/activate`
+`python3 -m venv venv
+```
+`source venv/bin/activate
+```
 
 ### 3. Instalar as Dependencias
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 ### 4. Inicializacao do Sistema
 
 - **Opcao A:** Inicializacao Rapida (Apenas Windows)
-`executar.bat`
+```bash
+executar.bat
+```
 
 - **Opcao B:** Inicializacao Manual (Linux / Mac / Windows)
 
 Terminal 1: Levantando a API 
-`uvicorn main:app --reload`
+```bash
+uvicorn main:app --reload
+```
 
 Terminal 2: Iniciando o Gateway de Ingestao
-`python receptor.py`
+```bash
+python receptor.py
+```
 
 Terminal 3: Iniciando a Emissao de Dados Fisicos
-`python simulador.py`
+```bash
+python simulador.py
+```
 
 Terminal 4: Abrindo o Painel de Monitoramento
-`streamlit run dashboard.py`
+```bash
+streamlit run dashboard.py
+```
