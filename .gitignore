@@ -1,0 +1,11 @@
+# Ambiente Virtual e arquivos de cache
+ocpct/
+venv/
+__pycache__/
+
+# Banco de Dados
+*.db
+telemetria.db
+
+# Variaveis de ambiente
+.env
