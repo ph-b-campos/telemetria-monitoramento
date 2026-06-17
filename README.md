@@ -8,3 +8,41 @@ Ingestão: Recepção de dados de alta frequência via sockets UDP.
 Processamento: Validação e limpeza de payloads em tempo real utilizando FastAPI e Pydantic.
 
 Visualização: Desenvolvimento de painel operacional com atualização contínua e baixa latência utilizando Streamlit.
+
+## Como Executar o Projeto
+
+### 1. Clonar o Repositorio
+`git clone https://github.com/ph-b-campos/telemetria-monitoramento.git`
+`cd telemetria-monitoramento`
+
+### 2. Configurar o Ambiente Virtual
+
+**No Windows:**
+`python -m venv venv`
+`venv\Scripts\activate`
+
+**No Linux ou Mac:**
+`python3 -m venv venv`
+`source venv/bin/activate`
+
+### 3. Instalar as Dependencias
+`pip install -r requirements.txt`
+
+### 4. Inicializacao do Sistema
+
+- **Opcao A:** Inicializacao Rapida (Apenas Windows)
+`executar.bat`
+
+- **Opcao B:** Inicializacao Manual (Linux / Mac / Windows)
+
+Terminal 1: Levantando a API 
+`uvicorn main:app --reload`
+
+Terminal 2: Iniciando o Gateway de Ingestao
+`python receptor.py`
+
+Terminal 3: Iniciando a Emissao de Dados Fisicos
+`python simulador.py`
+
+Terminal 4: Abrindo o Painel de Monitoramento
+`streamlit run dashboard.py`
